@@ -93,13 +93,20 @@ async function loadBookings() {
     const response = await fetch(`/bookings?username=${username}`);
     const bookings = await response.json();
 
-    const bookingList = document.getElementById("booking-list");
-    bookingList.innerHTML = "";
-    
+    const bookingBody = document.getElementById("booking-body");
+    bookingBody.innerHTML = ""; 
+
     bookings.forEach(booking => {
-        const li = document.createElement("li");
-        li.textContent = `${booking.doctor} - ${booking.time}`;
-        bookingList.appendChild(li);
+        const [date, time] = booking.time.split("T"); // Split date and time
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${booking.doctor}</td>
+            <td>${date}</td>
+            <td>${time}</td>
+        `;
+
+        bookingBody.appendChild(row);
     });
 }
 
