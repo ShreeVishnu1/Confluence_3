@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        select, button { display: block; margin: 10px auto; padding: 10px; width: 200px; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a href="home.html">Home</a> | <a href="download.html">Download Unity Package</a>
 
     <h1>Welcome to Dashboard</h1>
     <h2>Book a Physiotherapy Slot</h2>
-    
+
     <select id="doctor">
         <option value="Dr. Smith">Dr. Smith</option>
         <option value="Dr. Patel">Dr. Patel</option>
@@ -25,7 +22,20 @@
     <button onclick="bookSlot()">Book Slot</button>
 
     <h2>Your Bookings</h2>
-    <ul id="booking-list"></ul>
+
+    <!-- Table for booked slots -->
+    <table id="booking-table">
+        <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="booking-body">
+            <!-- Booked slots will be inserted here -->
+        </tbody>
+    </table>
 
     <button onclick="logout()">Logout</button>
 
