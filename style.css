@@ -61,3 +61,15 @@ button:hover {
 #booking-table tr:hover {
     background-color: #f1f1f1;
 }
+
+canvas {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
