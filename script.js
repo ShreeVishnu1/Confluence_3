@@ -56,7 +56,8 @@ function login() {
         if (data.success) {
             localStorage.setItem("username", username);  // ✅ Store username in localStorage
             alert("Login successful!");
-            window.location.href = 'dashboard.html';
+            window.location.href = "home.html";
+
         } else {
             alert("Invalid credentials.");
         }
