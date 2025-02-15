@@ -72,7 +72,7 @@ app.get('/bookings', async (req, res) => {
 });
 
 app.get('/download-unity', (req, res) => {
-    res.download(path.join(__dirname, 'PhysioVR.unitypackage'));
+    res.download(path.join(__dirname, 'Reflective_Care.unitypackage'));
 });
 
 app.listen(port, () => console.log(`Server running at http://localhost:${port}`));
