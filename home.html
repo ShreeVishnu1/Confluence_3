@@ -5,8 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        a, button { display: block; margin: 10px auto; padding: 10px; width: 200px; text-decoration: none; background: #007bff; color: white; text-align: center; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 50px; 
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #333;
+        }
+        a, button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px;
+            width: 220px;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a {
+            background: #007bff;
+        }
+        a:hover {
+            background: #0056b3;
+        }
+        button {
+            background: #dc3545;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #c82333;
+        }
     </style>
 </head>
 <body>
@@ -17,6 +50,10 @@
 
     <button onclick="logout()">Logout</button>
 
-    <script src="script.js"></script>
+    <script>
+        function logout() {
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>
