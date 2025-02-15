@@ -5,17 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download Unity Package</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; margin: 50px; }
-        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        body { 
+            text-align: center; 
+            font-family: Arial, sans-serif; 
+            margin: 50px; 
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .logout {
+            background: #dc3545;
+        }
+        .logout:hover {
+            background: #c82333;
+        }
     </style>
 </head>
 <body>
-    <a href="home.html">Home</a> | <a href="dashboard.html">Dashboard</a>
+    <a href="home.html">Home</a> 
+    <a href="dashboard.html">Dashboard</a>
 
     <h1>Download PhysioVR Unity Package</h1>
     <button onclick="downloadUnity()">Download</button>
     
-    <button onclick="logout()">Logout</button>
+    <button class="logout" onclick="logout()">Logout</button>
 
     <script>
         function downloadUnity() {
