@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -6,10 +7,12 @@ body {
     padding: 0;
 }
 
+/* Headings */
 h1, h2 {
     color: #333;
 }
 
+/* Form Elements */
 input, select, button {
     display: block;
     margin: 10px auto;
@@ -26,6 +29,13 @@ input {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons */
 button {
     cursor: pointer;
     background-color: #007bff;
@@ -43,6 +53,10 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+button:active {
+    transform: scale(0.98);
+}
+
 /* Login Page Styling */
 .login-container {
     width: 350px;
@@ -56,6 +70,17 @@ button:hover {
 .login-container h1 {
     margin-bottom: 20px;
     color: #007bff;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Table Styling */
@@ -88,12 +113,27 @@ button:hover {
 
 /* Graph Styling */
 canvas {
-    max-width: 80%;
-    height: auto;
+    max-width: 90%;
+    height: 400px !important;
     display: block;
     margin: 20px auto;
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+    }
+
+    input, select, button {
+        width: 90%;
+    }
+
+    #booking-table {
+        width: 100%;
+    }
 }
