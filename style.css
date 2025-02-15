@@ -13,10 +13,17 @@ h1, h2 {
 input, select, button {
     display: block;
     margin: 10px auto;
-    padding: 10px;
-    width: 250px;
+    padding: 12px;
+    width: 280px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -24,14 +31,31 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 button:hover {
     background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Page Styling */
+.login-container {
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #007bff;
 }
 
 /* Table Styling */
@@ -62,6 +86,7 @@ button:hover {
     background-color: #f1f1f1;
 }
 
+/* Graph Styling */
 canvas {
     max-width: 80%;
     height: auto;
@@ -72,4 +97,3 @@ canvas {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
