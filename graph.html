@@ -1,4 +1,48 @@
-const movementChart = new Chart(ctx, {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Movement Speed Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+        canvas {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hand Movement Speed Analysis</h1>
+
+    <label>Patient Hand Speed:</label>
+    <input type="number" id="patient-speed" placeholder="Enter speed value">
+    
+    <label>Healthy Hand Speed:</label>
+    <input type="number" id="healthy-speed" placeholder="Enter speed value">
+    
+    <button onclick="updateGraph()">Update Graph</button>
+
+    <canvas id="movementGraph" width="800" height="400"></canvas>
+
+
+    <script>
+        const ctx = document.getElementById('movementGraph').getContext('2d');
+
+        let patientData = [];
+        let healthyData = [];
+        let labels = [];
+
+        const movementChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: labels,
@@ -30,3 +74,21 @@ const movementChart = new Chart(ctx, {
         }
     }
 });
+
+        function updateGraph() {
+            const patientSpeed = parseFloat(document.getElementById('patient-speed').value);
+            const healthySpeed = parseFloat(document.getElementById('healthy-speed').value);
+
+            if (!isNaN(patientSpeed) && !isNaN(healthySpeed)) {
+                labels.push(`Day ${labels.length + 1}`);
+                patientData.push(patientSpeed);
+                healthyData.push(healthySpeed);
+
+                movementChart.update();
+            } else {
+                alert("Please enter valid speed values.");
+            }
+        }
+    </script>
+</body>
+</html>
