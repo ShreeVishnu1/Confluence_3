@@ -65,7 +65,7 @@
             options: {
                 responsive: true,
                 scales: {
-                    x: { title: { display: true, text: "Time / Measurement Points" } },
+                    x: { title: { display: true, text: "Days" } },  // Changed X-axis label to Days
                     y: { title: { display: true, text: "Speed" } }
                 }
             }
@@ -76,7 +76,7 @@
             const healthySpeed = parseFloat(document.getElementById('healthy-speed').value);
 
             if (!isNaN(patientSpeed) && !isNaN(healthySpeed)) {
-                labels.push(labels.length + 1);
+                labels.push(`Day ${labels.length + 1}`);
                 patientData.push(patientSpeed);
                 healthyData.push(healthySpeed);
 
